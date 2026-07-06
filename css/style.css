@@ -646,12 +646,12 @@ body::before {
   margin-top: 35px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   max-width: 640px;
 }
 .form-row {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 .form-field {
