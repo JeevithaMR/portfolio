@@ -635,7 +635,7 @@ body::before {
   font-weight: 500;
   font-style: italic;
   font-size: clamp(1.1rem, 2.2vw, 1.8rem);
-  line-height: 1.5;
+  line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
   color: var(--color-text);
