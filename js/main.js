@@ -200,29 +200,4 @@
       if (e.key === "Escape") closeLightbox();
     });
   });
-
-  /* ---------- Contact form (opens visitor's email app) ---------- */
-  var contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      var name = contactForm.name.value.trim();
-      var email = contactForm.email.value.trim();
-      var subject = contactForm.subject.value.trim() || "Portfolio Contact";
-      var message = contactForm.message.value.trim();
-
-      var body =
-        (name ? "Name: " + name + "\n" : "") +
-        "Email: " + email + "\n\n" +
-        message;
-
-      var mailtoLink =
-        "mailto:jeevithamr@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-
-      window.location.href = mailtoLink;
-    });
-  }
 })();
