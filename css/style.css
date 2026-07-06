@@ -99,7 +99,7 @@ body::before {
 .section-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  font-size: clamp(1.2rem, 3.2vw, 2.2rem);
   letter-spacing: -0.03em;
   margin-bottom: 32px;
   max-width: 20ch;
