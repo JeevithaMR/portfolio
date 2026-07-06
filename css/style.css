@@ -634,8 +634,8 @@ body::before {
   font-family: var(--font-display);
   font-weight: 500;
   font-style: italic;
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
-  line-height: 1.8;
+  font-size: clamp(1.1rem, 2.2vw, 1.75rem);
+  line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
   color: var(--color-text);
