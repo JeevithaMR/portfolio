@@ -196,27 +196,28 @@
 
     lightboxCloseEls.forEach(function (el) { el.addEventListener("click", closeLightbox); });
 
-    document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeLightbox();
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeLightbox();
+    });
   });
 
   /* ---------- Contact form (opens visitor's email app) ---------- */
-  const contactForm = document.getElementById("contactForm");
+  var contactForm = document.getElementById("contactForm");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const name = contactForm.name.value.trim();
-      const email = contactForm.email.value.trim();
-      const subject = contactForm.subject.value.trim() || "Portfolio Contact";
-      const message = contactForm.message.value.trim();
+      var name = contactForm.name.value.trim();
+      var email = contactForm.email.value.trim();
+      var subject = contactForm.subject.value.trim() || "Portfolio Contact";
+      var message = contactForm.message.value.trim();
 
-      const body =
+      var body =
         (name ? "Name: " + name + "\n" : "") +
         "Email: " + email + "\n\n" +
         message;
 
-      const mailtoLink =
+      var mailtoLink =
         "mailto:jeevithamr@gmail.com" +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
