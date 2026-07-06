@@ -663,6 +663,7 @@ body::before {
   margin-bottom: 8px;
 }
 .contact-value { font-size: 1.02rem; font-weight: 600; }
+.contact-lead { max-width: 100%; }
 
 /* ---------- Footer ---------- */
 .site-footer {
