@@ -100,7 +100,7 @@ body::before {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(1.5rem, 3.2vw, 2.4rem);
-  letter-spacing: -0.9em;
+  letter-spacing: -0.12em;
   margin-bottom: 32px;
   max-width: 20ch;
 }
