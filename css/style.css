@@ -89,7 +89,7 @@ body::before {
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 1.6rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
   margin-bottom: 18px;
