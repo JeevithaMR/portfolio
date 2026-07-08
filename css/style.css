@@ -92,7 +92,7 @@ body::before {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-accent);
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   font-weight: 500;
 }
 
