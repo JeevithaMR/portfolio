@@ -27,6 +27,7 @@
       <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="#about" class="nav-link" data-nav>About</a>
         <a href="#academics" class="nav-link" data-nav>Academics</a>
+        <a href="#skills" class="nav-link" data-nav>Skills</a>
         <a href="#projects" class="nav-link" data-nav>Projects</a>
         <a href="#awards" class="nav-link" data-nav>Achievements</a>
         <a href="#contact" class="nav-link" data-nav>Contact</a>
@@ -42,6 +43,7 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="home">
+      <div class="hero-bg-glow" aria-hidden="true"></div>
       <div class="hero-waveform" id="heroWaveform" aria-hidden="true"></div>
       <div class="section-inner hero-inner">
         <p class="hero-name reveal-up">Jeevitha MR</p>
@@ -214,6 +216,26 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PRESENTATION ===================== -->
+    <section class="section" id="featured-talk">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Featured Presentation</p>
+        <h2 class="section-title reveal-up">Keynote Platforms</h2>
+
+        <article class="spotlight-card reveal-up">
+          <img src="assets/images/speaking/ted-ed-logo.png" alt="TED-Ed Student Talks logo" class="spotlight-logo" />
+          <p class="mini-label">TED-Ed Student Talks</p>
+          <h3 class="card-title">The Power of Belief: Exploring the Superstitions</h3>
+          <p class="body-md">
+            I spoke about the superstitions we quietly follow — where they come from, how they take
+            root across generations, and the case for weighing both their positive and negative
+            influence rather than dismissing them outright.
+          </p>
+          <a href="assets/documents/ted-ed-talk.pdf" target="_blank" rel="noopener" class="btn-view">View PPT</a>
+        </article>
       </div>
     </section>
 
@@ -400,18 +422,6 @@
         <p class="eyebrow reveal-up">Speaking &amp; Leadership</p>
         <h2 class="section-title reveal-up">On Stage, In Front of a Room</h2>
 
-        <article class="spotlight-card reveal-up">
-          <img src="assets/images/speaking/ted-ed-logo.png" alt="TED-Ed Student Talks logo" class="spotlight-logo" />
-          <p class="mini-label">TED-Ed Student Talks</p>
-          <h3 class="card-title">The Power of Belief: Exploring the Superstitions</h3>
-          <p class="body-md">
-            I spoke about the superstitions we quietly follow — where they come from, how they take
-            root across generations, and the case for weighing both their positive and negative
-            influence rather than dismissing them outright.
-          </p>
-          <a href="assets/documents/ted-ed-talk.pdf" target="_blank" rel="noopener" class="btn-view">View PPT</a>
-        </article>
-
         <div class="leadership-split">
           <div class="events-block reveal-up" data-delay="1">
             <p class="mini-label">Events Hosted</p>
@@ -554,6 +564,25 @@
         <p class="body-lg reveal-up" data-delay="1">
           Open to conversations about opportunities, ideas, or collaborations. Reach out any time.
         </p>
+
+        <!-- Dynamic Message Form -->
+        <form class="contact-form reveal-up" id="contactForm" data-delay="1.5" action="mailto:jeevithamr@gmail.com" method="post" enctype="text/plain">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="formName" class="form-label">Full Name</label>
+              <input type="text" id="formName" name="Name" class="form-control" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="formEmail" class="form-label">Email Address</label>
+              <input type="email" id="formEmail" name="Email" class="form-control" placeholder="yourname@example.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="formMessage" class="form-label">Your Message</label>
+            <textarea id="formMessage" name="Message" class="form-control" rows="5" placeholder="Write your thoughts here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit-btn">Send Message</button>
+        </form>
 
         <div class="contact-row reveal-up" data-delay="2">
           <a href="mailto:jeevithamr@gmail.com" class="contact-link">
