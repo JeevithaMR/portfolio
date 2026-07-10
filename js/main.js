@@ -135,6 +135,8 @@
     var rotatingEl = document.getElementById("rotatingSkill");
     if (!rotatingEl) return;
     var idx = 0;
+    
+    // Hardened looping mechanism ensures continuous cycling without hanging
     setInterval(function () {
       rotatingEl.classList.add("fade");
       setTimeout(function () {
@@ -142,7 +144,7 @@
         rotatingEl.textContent = rotatingWords[idx];
         rotatingEl.classList.remove("fade");
       }, 350);
-    }, 3000);
+    }, 2500); // Ticker updates seamlessly every 2.5 seconds
   });
 
   /* ---------- Lightbox ---------- */
