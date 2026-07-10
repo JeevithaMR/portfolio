@@ -99,10 +99,10 @@ body::before {
 .section-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(1.95rem, 3.8vw, 3.0rem); /* Made headings slightly larger and more professional */
+  letter-spacing: -0.015em;
   margin-bottom: 32px;
-  max-width: 20ch;
+  max-width: 25ch;
 }
 
 .mini-label {
@@ -117,14 +117,14 @@ body::before {
 .card-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.22rem; /* Made subheadings slightly smaller for better hierarchy */
   margin-bottom: 4px;
 }
 
 .card-title-sm {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.0rem; /* Proportional reduction */
   margin-bottom: 4px;
 }
 
@@ -277,6 +277,27 @@ body::before {
   position: relative;
   padding-top: 90px;
   text-align: center;
+  overflow: hidden;
+}
+
+/* High-end decorative ambient asset logic for an exciting opening visual feel */
+.hero-bg-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232, 176, 35, 0.08) 0%, transparent 70%);
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+  animation: slowPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes slowPulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
 }
 
 .hero-waveform {
@@ -290,6 +311,7 @@ body::before {
   height: 60px;
   opacity: 0.35;
   pointer-events: none;
+  z-index: 1;
 }
 .hero-waveform span {
   display: block;
@@ -304,7 +326,7 @@ body::before {
   50% { height: 42px; opacity: 1; }
 }
 
-.hero-inner { max-width: 880px; }
+.hero-inner { max-width: 880px; position: relative; z-index: 2; }
 
 .hero-name {
   font-family: var(--font-display);
@@ -353,6 +375,7 @@ body::before {
   display: flex;
   justify-content: center;
   padding-top: 8px;
+  z-index: 2;
 }
 .scroll-cue span {
   width: 4px; height: 8px;
@@ -634,11 +657,67 @@ body::before {
   font-family: var(--font-display);
   font-weight: 500;
   font-style: italic;
-  font-size: clamp(1.3rem, 2.6vw, 2.1rem);
-  line-height: 1.5;
-  max-width: 800px;
+  font-size: clamp(1.1rem, 2.0vw, 1.55rem); /* Scaled down content text layout for premium professional scannability */
+  line-height: 1.6;
+  max-width: 720px;
   margin: 0 auto;
+  color: var(--color-text-dim);
+}
+
+/* ---------- Contact Form Layout Rules ---------- */
+.contact-form {
+  max-width: 760px;
+  margin: 40px auto 48px auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 40px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.form-group {
+  margin-bottom: 24px;
+  text-align: left;
+}
+.form-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-dim);
+  margin-bottom: 10px;
+}
+.form-control {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 14px 18px;
   color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-dim);
+}
+.form-control::placeholder {
+  color: var(--color-text-faint);
+  opacity: 0.6;
+}
+.form-submit-btn {
+  width: auto;
+  min-width: 160px;
+  justify-content: center;
+  border-radius: 8px;
 }
 
 /* ---------- Contact ---------- */
@@ -750,9 +829,6 @@ body::before {
 }
 
 /* ---------- Scroll reveal ---------- */
-/* Visible by default — the hidden/animated state only applies once JS
-   confirms it has successfully initialized (html.js-ready class added).
-   This guarantees text is never stuck invisible if a script fails to load. */
 .reveal-up {
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
@@ -784,6 +860,7 @@ html.js-ready .reveal-up.in-view {
 }
 
 @media (max-width: 780px) {
+  .form-grid { grid-template-columns: 1fr; gap: 0; }
   .nav-links {
     position: fixed;
     top: 64px; left: 0; right: 0;
