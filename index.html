@@ -1,146 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Portfolio</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeevitha MR — Portfolio</title>
+  <meta name="description" content="Jeevitha MR — Building meaningful ideas through leadership, creativity, and innovation. A portfolio of academic work, leadership, speaking, and achievements." />
+  <meta name="author" content="Jeevitha MR" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jeevitha MR — Portfolio" />
+  <meta property="og:description" content="Building meaningful ideas through leadership, creativity, and innovation." />
+  <meta property="og:type" content="website" />
+
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-    <!-- Ambient Background Elements for Hero -->
-    <div class="hero-bg-gradient"></div>
-    <div class="hero-glow-1"></div>
-    <div class="hero-glow-2"></div>
+  <!-- Scroll progress / signal line -->
+  <div class="signal-progress" id="signalProgress" aria-hidden="true"></div>
 
-    <!-- Navigation -->
-    <nav class="nav-container">
-        <div class="nav-logo">PORTFOLIO</div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#milestone">Milestone</a>
-            <a href="#leadership">Leadership</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a href="#home" class="nav-logo" aria-label="Jeevitha MR — Home">JM<span class="dot">R</span></a>
 
-    <!-- Hero Section -->
-    <section id="about" class="hero-section">
-        <div class="hero-content">
-            <span class="eyebrow reveal-up">Welcome to My World</span>
-            <h1 class="hero-title reveal-up" data-delay="1">YOUR NAME</h1>
-            <p class="hero-subtitle reveal-up" data-delay="2">
-                Driven by <span class="txt-rotate" id="rotating-text" data-words='["Leadership", "Creativity", "Innovation", "Excellence"]'>Leadership</span>
-            </p>
-        </div>
-    </section>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#about" class="nav-link" data-nav>About</a>
+        <a href="#academics" class="nav-link" data-nav>Academics</a>
+        <a href="#projects" class="nav-link" data-nav>Projects</a>
+        <a href="#awards" class="nav-link" data-nav>Achievements</a>
+        <a href="#contact" class="nav-link" data-nav>Contact</a>
+      </nav>
 
-    <!-- Academic Journey & Skills Section -->
-    <section id="skills" class="section-container">
-        <span class="eyebrow reveal-up">Expertise & Journey</span>
-        <h2 class="section-title reveal-up">Skills & Academic Foundation</h2>
-        <div class="grid-two-col grid-gap-md margin-top-lg">
-            <div class="glass-card reveal-up">
-                <h3 class="card-title">Academic Journey</h3>
-                <p class="body-md text-muted">Completed 12th Grade / 2nd PUC with a focus on commerce and business applications, establishing a foundational approach toward global market dynamics.</p>
-            </div>
-            <div class="glass-card reveal-up" data-delay="1">
-                <h3 class="card-title">Core Capabilities</h3>
-                <p class="body-md text-muted">Sourcing optimization, international market analysis, customer outreach strategy, and industrial engineering goods classification (HS codes).</p>
-            </div>
-        </div>
-    </section>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-    <!-- NEW SECTION: A Defining Moment (TED-Ed Spotlight) -->
-    <section id="milestone" class="section-container section-highlight">
-        <span class="eyebrow reveal-up">Exclusive Achievement</span>
-        <h2 class="section-title reveal-up">A Defining Moment</h2>
-        <div class="premium-spotlight-card reveal-up margin-top-lg">
-            <div class="spotlight-content">
-                <div class="badge">TED-Ed Spotlight</div>
-                <h3 class="spotlight-title">TED-Ed Presentation & Conceptualization</h3>
-                <p class="body-md text-muted">A highly selective milestone opportunity demonstrating elite research capabilities, conceptual clarity, and public presentation standards on a globally recognized academic platform.</p>
-                <a href="#" class="btn-primary margin-top-md">View PPT Presentation</a>
-            </div>
-        </div>
-    </section>
+  <main>
 
-    <!-- Speaking & Leadership Section (Without TED-Ed Card) -->
-    <section id="leadership" class="section-container">
-        <span class="eyebrow reveal-up">Engagement</span>
-        <h2 class="section-title reveal-up">Speaking & Leadership</h2>
-        <div class="grid-two-col grid-gap-md margin-top-lg">
-            <div class="glass-card reveal-up">
-                <h3 class="card-title">Events Hosted & Anchoring</h3>
-                <p class="body-md text-muted">Spearheaded professional curation, crowd engagement, and stage execution for elite corporate and institutional events, ensuring flawless transitions and continuous audience connection.</p>
-            </div>
-            <div class="glass-card reveal-up" data-delay="1">
-                <h3 class="card-title">VisionX Initiatives</h3>
-                <p class="body-md text-muted">Leading strategic direction and collaborative frameworks to turn conceptual industrial innovations into structural, scalable blueprints.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Future Vision Section -->
-    <section class="section-container text-center">
-        <span class="eyebrow reveal-up">Looking Ahead</span>
-        <h2 class="section-title reveal-up">Future Vision</h2>
-        <p class="vision-quote reveal-up margin-top-md">
-            To integrate modern commercial principles with complex industrial engineering logistics, building an unmatched, seamless bridge for bilateral trade between established and emerging global economic hubs.
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <div class="hero-waveform" id="heroWaveform" aria-hidden="true"></div>
+      <div class="section-inner hero-inner">
+        <p class="hero-name reveal-up">Jeevitha MR</p>
+        <h1 class="hero-headline reveal-up" data-delay="1">
+          Building meaningful ideas through <span class="accent-text">leadership</span>,
+          <span class="accent-text">creativity</span>, and <span class="accent-text">innovation</span>.
+        </h1>
+        <p class="hero-sub reveal-up" data-delay="2">
+          I solve real problems with curiosity and initiative — leading teams, researching markets,
+          and stepping on stage to speak, rather than letting a single title define me.
         </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-container contact-section">
-        <span class="eyebrow reveal-up">Get In Touch</span>
-        <h2 class="section-title reveal-up">Let's Connect</h2>
-        <p class="body-lg contact-lead reveal-up margin-top-sm">Have an inquiry or looking to collaborate? Drop a message right out any time.</p>
-        
-        <!-- Beautifully Aligned, Grid-Structured Form -->
-        <form class="contact-form margin-top-lg reveal-up">
-            <div class="form-grid">
-                <div class="form-field">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="John Doe" required>
-                </div>
-                <div class="form-field">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="john@example.com" required>
-                </div>
-            </div>
-            <div class="form-field margin-top-sm">
-                <label for="message">Your Message</label>
-                <textarea id="message" rows="6" placeholder="Tell me about your project or inquiry..." required></textarea>
-            </div>
-            <button type="submit" class="btn-primary margin-top-md">Send Message</button>
-        </form>
-
-        <!-- Divider Line and Social Cards -->
-        <hr class="contact-divider margin-top-xl reveal-up">
-        
-        <div class="social-container reveal-up">
-            <a href="#" class="social-card">
-                <span>LinkedIn</span>
-                <span class="arrow">→</span>
-            </a>
-            <a href="#" class="social-card">
-                <span>Twitter</span>
-                <span class="arrow">→</span>
-            </a>
-            <a href="#" class="social-card">
-                <span>Email Contact</span>
-                <span class="arrow">→</span>
-            </a>
+        <div class="hero-actions reveal-up" data-delay="3">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
         </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+        <span></span>
+      </a>
     </section>
 
-    <!-- Script File -->
-    <script src="js/main.js"></script>
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">About</p>
+        <div class="about-grid">
+          <div class="about-text reveal-up">
+            <h2 class="section-title">Who I Am</h2>
+            <p class="body-lg">
+              I'm someone who enjoys solving meaningful business and real-world problems through
+              creativity, leadership, curiosity, and continuous learning. I don't define myself by a
+              degree or a single profession — I'd rather let my work and experiences speak for themselves.
+              Whether it's leading a team, researching a market, or stepping on stage to speak, I bring
+              the same mindset: stay curious, stay adaptable, and keep building.
+            </p>
+            <p class="body-lg" style="margin-top: 20px;">
+              Most of what I know, I've picked up by actually doing the work — leading college teams
+              through real business simulations, digging into markets no one asked me to research, and
+              saying yes to opportunities that pushed me a little further each time. I'm comfortable
+              switching between roles: the person analyzing a spreadsheet one day, and the one hosting
+              a stage in front of a few hundred people the next.
+            </p>
+            <p class="body-lg" style="margin-top: 20px;">
+              I think a lot about how businesses actually work — not just the theory of it, but the
+              messy, practical side: how a team stays motivated, how a pitch lands, how a market
+              actually behaves once real people are involved. That curiosity is what pulls me toward
+              new tools, new certifications, and new rooms to walk into.
+            </p>
+
+            <div class="languages-block">
+              <p class="mini-label">Languages I Speak</p>
+              <div class="lang-row">
+                <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">Fluent</span></div>
+                <div class="lang-item"><span class="lang-name">Kannada</span><span class="lang-level">Native</span></div>
+                <div class="lang-item"><span class="lang-name">Hindi</span><span class="lang-level">Conversational</span></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-card reveal-up" data-delay="1">
+            <p class="mini-label">What Drives Me</p>
+            <div class="rotating-skill" id="rotatingSkill" aria-live="polite">Leadership</div>
+            <ul class="soft-skill-list">
+              <li>Strategic Thinking</li>
+              <li>Public Speaking</li>
+              <li>Problem Solving</li>
+              <li>Adaptability</li>
+              <li>Teamwork</li>
+              <li>Initiative</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACADEMIC JOURNEY ===================== -->
+    <section class="section" id="academics">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Academic Journey</p>
+        <h2 class="section-title reveal-up">The Path So Far</h2>
+
+        <div class="timeline">
+          <div class="timeline-track" aria-hidden="true"></div>
+
+          <article class="timeline-item reveal-up">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <p class="mini-label">2024</p>
+              <h3 class="card-title">SSLC</h3>
+              <p class="card-meta">Sri Kannika English School, Tumkur</p>
+              <div class="stat-row">
+                <span class="stat-pill">90.72%</span>
+                <span class="stat-pill stat-pill-muted">567 Marks</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal-up" data-delay="1">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <p class="mini-label">2024 – 2026</p>
+              <h3 class="card-title">II PUC</h3>
+              <p class="card-meta">Sri Sapthagiri PU College, Tumkur · Commerce (CEBA)</p>
+              <div class="stat-row">
+                <span class="stat-pill">95.83%</span>
+                <span class="stat-pill stat-pill-muted">575 Marks</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal-up" data-delay="2">
+            <div class="timeline-node timeline-node-active"></div>
+            <div class="timeline-card">
+              <p class="mini-label">Currently Pursuing</p>
+              <h3 class="card-title">Bachelor of Business Administration</h3>
+              <p class="card-meta">Sheshadripuram Degree College, Tumkur</p>
+              <div class="stat-row">
+                <span class="stat-pill stat-pill-live">In Progress</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Skills</p>
+        <h2 class="section-title reveal-up">What I Work With</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal-up">
+            <p class="mini-label">Microsoft</p>
+            <div class="tag-row">
+              <span class="tag">Excel</span><span class="tag">Word</span><span class="tag">PowerPoint</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up" data-delay="1">
+            <p class="mini-label">Design</p>
+            <div class="tag-row">
+              <span class="tag">Canva</span><span class="tag">Graphic Design (Flyers, Posters &amp; Business Cards)</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up" data-delay="2">
+            <p class="mini-label">AI Tools</p>
+            <div class="tag-row">
+              <span class="tag">ChatGPT</span><span class="tag">Gemini</span><span class="tag">Claude</span><span class="tag">DeepSeek</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up">
+            <p class="mini-label">Business</p>
+            <div class="tag-row">
+              <span class="tag">Market Research</span><span class="tag">Market Analysis</span>
+              <span class="tag">Strategic Planning</span><span class="tag">Business Development</span>
+              <span class="tag">Client Outreach</span><span class="tag">Competitor &amp; Pricing Analysis</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up" data-delay="1">
+            <p class="mini-label">Writing &amp; Storytelling</p>
+            <div class="tag-row">
+              <span class="tag">Research Writing</span><span class="tag">Report Writing</span>
+              <span class="tag">Content Writing</span><span class="tag">Scriptwriting</span>
+            </div>
+          </div>
+          <div class="skill-card skill-card-learning reveal-up" data-delay="2">
+            <p class="mini-label">Currently Learning</p>
+            <div class="tag-row">
+              <span class="tag tag-learning">Data Analysis</span><span class="tag tag-learning">Power BI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Featured Projects</p>
+        <h2 class="section-title reveal-up">Work That Shaped My Thinking</h2>
+
+        <div class="project-grid">
+          <article class="project-card reveal-up">
+            <div class="project-media project-media-logo">
+              <img src="assets/images/projects/lenskart-logo.png" alt="Lenskart logo" />
+            </div>
+            <div class="project-body">
+              <p class="mini-label">BOCS</p>
+              <h3 class="card-title">Lenskart</h3>
+              <p class="card-role">Team Leader</p>
+              <p class="body-md">
+                A study into how an established company functions from a business, marketing, and
+                financial perspective — including market research, financial statement analysis, SWOT
+                and strategy analysis, and a public awareness survey I designed and conducted myself.
+              </p>
+              <div class="tag-row tag-row-tight">
+                <span class="tag tag-outline">Market Research</span>
+                <span class="tag tag-outline">Financial Analysis</span>
+                <span class="tag tag-outline">SWOT</span>
+                <span class="tag tag-outline">Survey Design</span>
+              </div>
+              <div class="doc-links">
+                <a href="https://drive.google.com/file/d/13laFcLtRmRaDTkrT5iev0SwOqun2j4Wm/view?usp=sharing" target="_blank" rel="noopener" class="btn-view btn-view-sm">View Report</a>
+                <a href="assets/documents/lenskart-research-paper.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View Research Paper</a>
+                <a href="assets/documents/lenskart-ppt.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View PPT</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="1">
+            <div class="project-media project-media-logo">
+              <img src="assets/images/projects/wellnest-logo.png" alt="Wellnest logo" />
+            </div>
+            <div class="project-body">
+              <p class="mini-label">SEPME</p>
+              <h3 class="card-title">Wellnest</h3>
+              <p class="card-role">Team Leader</p>
+              <p class="body-md">
+                A virtual startup built from the ground up — realistic business planning, financials,
+                branding, pricing, marketing, and operations. I guided the team, managed report writing,
+                led presentations, and coordinated the overall execution.
+              </p>
+              <div class="tag-row tag-row-tight">
+                <span class="tag tag-outline">Startup Planning</span>
+                <span class="tag tag-outline">Pricing Strategy</span>
+                <span class="tag tag-outline">Financial Planning</span>
+              </div>
+              <div class="doc-links">
+                <a href="assets/documents/wellnest-report.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View Report</a>
+                <a href="assets/documents/wellnest-ppt.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View PPT</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="2">
+            <div class="project-media project-media-logo">
+              <img src="assets/images/projects/freelancer-logo.png" alt="Freelancer logo" />
+            </div>
+            <div class="project-body">
+              <p class="mini-label">Freelancer</p>
+              <h3 class="card-title">Indore Market Analysis</h3>
+              <p class="card-role">Independent Researcher</p>
+              <p class="body-md">
+                The client wanted to set up a salon in Indore. I researched the local market —
+                competitors, pricing structures, and the most popular locations in the city — to
+                help guide their setup decision.
+              </p>
+              <div class="tag-row tag-row-tight">
+                <span class="tag tag-outline">Market Research</span>
+                <span class="tag tag-outline">Competitor Analysis</span>
+              </div>
+              <div class="doc-links">
+                <a href="assets/documents/indore-market-report.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View Report</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section class="section" id="certifications">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Certifications</p>
+        <h2 class="section-title reveal-up">Formal Learning</h2>
+
+        <div class="cert-grid">
+          <article class="cert-card reveal-up">
+            <div class="cert-badge">ACAS</div>
+            <h3 class="card-title-sm">Advance Computer Application Skills</h3>
+            <p class="card-meta">College Provided</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="ACAS Certificate" data-lightbox-src="assets/images/certifications/acas.jpg">View Certificate</button>
+          </article>
+          <article class="cert-card reveal-up" data-delay="1">
+            <div class="cert-badge">ACAS Pro</div>
+            <h3 class="card-title-sm">Advance Computer Application Skills Pro</h3>
+            <p class="card-meta">College Provided</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="ACAS Pro Certificate" data-lightbox-src="assets/images/certifications/acas-pro.jpg">View Certificate</button>
+          </article>
+          <article class="cert-card reveal-up" data-delay="2">
+            <div class="cert-badge">BA</div>
+            <h3 class="card-title-sm">Business Analysis Certification</h3>
+            <p class="card-meta">Coursera</p>
+            <a href="assets/documents/business-analysis-certificate.pdf" target="_blank" rel="noopener" class="btn-view">View Certificate</a>
+          </article>
+          <article class="cert-card reveal-up" data-delay="3">
+            <div class="cert-badge">Tally</div>
+            <h3 class="card-title-sm">Tally Accounting Certification</h3>
+            <p class="card-meta">College Provided</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="Tally Accounting Certificate" data-lightbox-src="assets/images/certifications/tally-accounting.jpg">View Certificate</button>
+          </article>
+          <article class="cert-card reveal-up">
+            <div class="cert-badge">BMC</div>
+            <h3 class="card-title-sm">Business Model Canvas</h3>
+            <p class="card-meta">Workshop, Sri Sapthagiri PU College</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="Business Model Canvas Certificate" data-lightbox-src="assets/images/certifications/business-model-canvas.jpg">View Certificate</button>
+          </article>
+          <article class="cert-card reveal-up" data-delay="1">
+            <div class="cert-badge">SIP</div>
+            <h3 class="card-title-sm">Summer Immersion Program</h3>
+            <p class="card-meta">Management, Entrepreneurship &amp; Finance — April 2025</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="Summer Immersion Program Certificate" data-lightbox-src="assets/images/certifications/sip.jpg">View Certificate</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Experience</p>
+        <h2 class="section-title reveal-up">Hands-On Learning</h2>
+
+        <article class="experience-card reveal-up">
+          <div class="experience-head">
+            <div>
+              <h3 class="card-title">Business Development Executive Intern</h3>
+              <p class="card-role">ATZ IMEX Pvt. Ltd.</p>
+            </div>
+            <p class="mini-label">20 Apr – 24 Jun</p>
+          </div>
+          <p class="body-md">
+            Worked on outreach strategies to reach UK clients, combining market research with hands-on
+            execution — from building the company's website to running email outreach at scale and
+            learning the fundamentals of international trade. Took initiative well beyond the brief,
+            contributing independently to the company's growth.
+          </p>
+          <button class="btn-view" data-lightbox data-lightbox-title="Internship Certificate" data-lightbox-src="assets/images/certifications/internship.jpg">View Certificate</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== AWARDS & RECOGNITION ===================== -->
+    <section class="section" id="awards">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Awards &amp; Recognition</p>
+        <h2 class="section-title reveal-up">Moments Worth Noting</h2>
+
+        <div class="award-grid">
+          <div class="award-chip reveal-up"><span class="award-name">Voice of Sapthagiri Award</span><span class="award-year">Ankura 2026</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Voice of Sapthagiri Award" data-lightbox-src="assets/images/awards/voice-of-sapthagiri.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="1"><span class="award-name">Student Ambassador Award</span><span class="award-year">Ankura 2026</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Student Ambassador Award" data-lightbox-src="assets/images/awards/student-ambassador.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="2"><span class="award-name">ACAS Ace Award</span><span class="award-year">Advance Computer Application Skills</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="ACAS Ace Award" data-lightbox-src="assets/images/awards/acas-ace.jpg">View</button></div>
+          <div class="award-chip reveal-up"><span class="award-name">ACAS Pro E-novation Award</span><span class="award-year">Advance Computer Application Skills Pro</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="ACAS Pro E-novation Award" data-lightbox-src="assets/images/awards/acas-pro-enovation.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="1"><span class="award-name">Best Individual Presenter</span><span class="award-year">BOCS</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Best Individual Presenter Award" data-lightbox-src="assets/images/awards/best-individual-presenter.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="2"><span class="award-name">Best Performance Award</span><span class="award-year">SEPME</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Best Performance Award" data-lightbox-src="assets/images/awards/best-performance.jpg">View</button></div>
+          <div class="award-chip reveal-up"><span class="award-name">Exemplary Performance Award</span><span class="award-year">Kurukshetra</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Exemplary Performance Award" data-lightbox-src="assets/images/awards/exemplary-performance.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="1"><span class="award-name">TED-Ed Student Talks</span><span class="award-year">Speaker</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="TED-Ed Student Talks" data-lightbox-src="assets/images/awards/ted-ed.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="2"><span class="award-name">Anchor Extraordinaire</span><span class="award-year">Namdesi 2025</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Anchor Extraordinaire Award" data-lightbox-src="assets/images/awards/anchor-extraordinaire.jpg">View</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SPEAKING & LEADERSHIP ===================== -->
+    <section class="section" id="speaking">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Speaking &amp; Leadership</p>
+        <h2 class="section-title reveal-up">On Stage, In Front of a Room</h2>
+
+        <article class="spotlight-card reveal-up">
+          <img src="assets/images/speaking/ted-ed-logo.png" alt="TED-Ed Student Talks logo" class="spotlight-logo" />
+          <p class="mini-label">TED-Ed Student Talks</p>
+          <h3 class="card-title">The Power of Belief: Exploring the Superstitions</h3>
+          <p class="body-md">
+            I spoke about the superstitions we quietly follow — where they come from, how they take
+            root across generations, and the case for weighing both their positive and negative
+            influence rather than dismissing them outright.
+          </p>
+          <a href="assets/documents/ted-ed-talk.pdf" target="_blank" rel="noopener" class="btn-view">View PPT</a>
+        </article>
+
+        <div class="leadership-split">
+          <div class="events-block reveal-up" data-delay="1">
+            <p class="mini-label">Events Hosted</p>
+            <div class="event-tag-row">
+              <span class="event-tag"><span class="event-name">BOCS</span><span class="event-year">2024</span></span>
+              <span class="event-tag"><span class="event-name">SEPME</span><span class="event-year">2024</span></span>
+              <span class="event-tag"><span class="event-name">Samarpana</span><span class="event-year">2024</span></span>
+              <span class="event-tag"><span class="event-name">Kurukshetra Adhyaya 6</span><span class="event-year">2025</span></span>
+              <span class="event-tag"><span class="event-name">Ankura</span><span class="event-year">2025</span></span>
+              <span class="event-tag"><span class="event-name">Namdesi</span><span class="event-year">2025</span></span>
+            </div>
+          </div>
+
+          <div class="visionx-block reveal-up" data-delay="2">
+            <p class="mini-label">VisionX</p>
+            <div class="visionx-row">
+              <div class="visionx-item">
+                <h4 class="card-title-sm">Banking Project</h4>
+                <p class="card-meta">Member, Acting Group</p>
+              </div>
+              <div class="visionx-item">
+                <h4 class="card-title-sm">Marketing Project</h4>
+                <p class="card-meta">Script Writer, Theatre Team</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HALL OF VICTORIES ===================== -->
+    <section class="section" id="victories">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Hall of Victories</p>
+        <h2 class="section-title reveal-up">College Competitions Won</h2>
+
+        <div class="victory-grid">
+          <article class="victory-card victory-gold reveal-up">
+            <p class="victory-prize">1st Prize</p>
+            <h3 class="card-title-sm">Aakhyana</h3>
+            <p class="card-meta">Video Advertisement</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Aakhyana — 1st Prize" data-lightbox-src="assets/images/victories/aakhyana.jpg">View</button>
+          </article>
+          <article class="victory-card victory-silver reveal-up" data-delay="1">
+            <p class="victory-prize">2nd Prize</p>
+            <h3 class="card-title-sm">Yaksha Prashne</h3>
+            <p class="card-meta">First PU</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Yaksha Prashne — 2nd Prize" data-lightbox-src="assets/images/victories/yaksha-prashne-2nd.jpg">View</button>
+          </article>
+          <article class="victory-card victory-bronze reveal-up" data-delay="2">
+            <p class="victory-prize">3rd Prize</p>
+            <h3 class="card-title-sm">Yaksha Prashne</h3>
+            <p class="card-meta">Second PU</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Yaksha Prashne — 3rd Prize" data-lightbox-src="assets/images/victories/yaksha-prashne-3rd.jpg">View</button>
+          </article>
+          <article class="victory-card victory-silver reveal-up">
+            <p class="victory-prize">2nd Prize</p>
+            <h3 class="card-title-sm">Manthan</h3>
+            <p class="card-meta">College Competition</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Manthan — 2nd Prize" data-lightbox-src="assets/images/victories/manthan.jpg">View</button>
+          </article>
+          <article class="victory-card victory-silver reveal-up" data-delay="1">
+            <p class="victory-prize">2nd Prize</p>
+            <h3 class="card-title-sm">Mayajaala</h3>
+            <p class="card-meta">College Competition</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Mayajaala — 2nd Prize" data-lightbox-src="assets/images/victories/mayajaala.jpg">View</button>
+          </article>
+          <article class="victory-card victory-bronze reveal-up" data-delay="2">
+            <p class="victory-prize">3rd Prize</p>
+            <h3 class="card-title-sm">Vrittanta</h3>
+            <p class="card-meta">College Competition</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Vrittanta — 3rd Prize" data-lightbox-src="assets/images/victories/vrittanta.jpg">View</button>
+          </article>
+          <article class="victory-card victory-participant reveal-up">
+            <p class="victory-prize">Participant</p>
+            <h3 class="card-title-sm">Mad Ad Show</h3>
+            <p class="card-meta">College Competition</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Mad Ad Show" data-lightbox-src="assets/images/victories/mad-ad-show.jpg">View</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BEYOND WORK ===================== -->
+    <section class="section" id="beyond">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Beyond Work</p>
+        <h2 class="section-title reveal-up">What I Turn To</h2>
+
+        <div class="beyond-grid">
+          <div class="beyond-block reveal-up">
+            <p class="mini-label">Topics I Love Discussing</p>
+            <div class="tag-row">
+              <span class="tag">Entrepreneurship</span><span class="tag">Artificial Intelligence</span>
+              <span class="tag">Psychology</span><span class="tag">Business Problems</span>
+              <span class="tag">Marketing</span><span class="tag">Sales</span>
+              <span class="tag">Photography</span><span class="tag">Gadgets</span>
+              <span class="tag">Emerging Technologies</span>
+            </div>
+          </div>
+
+          <div class="beyond-block reveal-up" data-delay="1">
+            <p class="mini-label">Hobbies</p>
+            <div class="tag-row">
+              <span class="tag tag-outline">Reading Books</span><span class="tag tag-outline">Photography</span>
+              <span class="tag tag-outline">Dancing</span><span class="tag tag-outline">Sketching</span>
+              <span class="tag tag-outline">Mandala Coloring</span><span class="tag tag-outline">Lippan Art</span>
+              <span class="tag tag-outline">Clay Craft</span><span class="tag tag-outline">Stock Market</span>
+              <span class="tag tag-outline">Researching Gadgets</span>
+            </div>
+          </div>
+
+          <div class="fun-fact-card reveal-up" data-delay="2">
+            <span class="fun-fact-icon">🐶</span>
+            <p class="body-md">Proud <strong>Canophilist</strong> — a genuine dog lover.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FUTURE VISION ===================== -->
+    <section class="section vision-section" id="vision">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Future Vision</p>
+        <blockquote class="vision-quote reveal-up">
+          In the coming years, I see myself as a well-known speaker, a respected mentor, and a
+          recognized leader — someone creating meaningful impact on society. I want to keep
+          showcasing my capabilities through real work, continuously adding new certifications,
+          internships, projects, and achievements, while building a personal brand rooted in
+          authenticity.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Contact</p>
+        <h2 class="section-title reveal-up">Let's Talk</h2>
+        <p class="body-lg reveal-up" data-delay="1">
+          Open to conversations about opportunities, ideas, or collaborations. Reach out any time.
+        </p>
+
+        <div class="contact-row reveal-up" data-delay="2">
+          <a href="mailto:jeevithamr@gmail.com" class="contact-link">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">jeevithamr@gmail.com</span>
+          </a>
+          <a href="#" class="contact-link" data-social="linkedin">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">Jeevitha MR</span>
+          </a>
+          <a href="#" class="contact-link" data-social="instagram">
+            <span class="contact-label">Instagram</span>
+            <span class="contact-value">@jeevitha</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <p class="nav-logo">JM<span class="dot">R</span></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="mailto:jeevithamr@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+    <p class="footer-copyright">© 2026 Jeevitha MR. All rights reserved.</p>
+  </footer>
+
+  <!-- ===================== LIGHTBOX MODAL ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" data-lightbox-close aria-label="Close">&times;</button>
+      <div class="lightbox-placeholder" id="lightboxImage">
+        <p id="lightboxTitle">Certificate</p>
+        <span class="lightbox-hint">Image will appear here once uploaded</span>
+      </div>
+    </div>
+  </div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
