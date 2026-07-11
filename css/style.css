@@ -88,21 +88,21 @@ body::before {
 /* ---------- Typography ---------- */
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.92rem;
-  letter-spacing: 0.12em;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);
   margin-bottom: 18px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .section-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(1.95rem, 3.8vw, 3.0rem); /* Made headings slightly larger and more professional */
-  letter-spacing: -0.015em;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.01em;
   margin-bottom: 32px;
-  max-width: 25ch;
+  max-width: 22ch;
 }
 
 .mini-label {
@@ -117,14 +117,14 @@ body::before {
 .card-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.22rem; /* Made subheadings slightly smaller for better hierarchy */
+  font-size: 1.3rem;
   margin-bottom: 4px;
 }
 
 .card-title-sm {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.0rem; /* Proportional reduction */
+  font-size: 1.05rem;
   margin-bottom: 4px;
 }
 
@@ -140,7 +140,7 @@ body::before {
   font-size: 0.92rem;
 }
 
-.body-lg { font-size: 1.12rem; color: var(--color-text-dim); max-width: 62ch; }
+.body-lg { font-size: 1.02rem; color: var(--color-text-dim); max-width: 62ch; }
 .body-md { font-size: 0.98rem; color: var(--color-text-dim); margin: 14px 0; }
 
 .accent-text { color: var(--color-accent); }
@@ -280,24 +280,16 @@ body::before {
   overflow: hidden;
 }
 
-/* High-end decorative ambient asset logic for an exciting opening visual feel */
-.hero-bg-glow {
+.hero::before {
+  content: "";
   position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(232, 176, 35, 0.08) 0%, transparent 70%);
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(50px);
-  pointer-events: none;
-  z-index: 0;
-  animation: slowPulse 8s ease-in-out infinite alternate;
-}
-
-@keyframes slowPulse {
-  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
-  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(700px 500px at 20% 15%, rgba(232, 176, 35, 0.14), transparent 60%),
+    radial-gradient(600px 450px at 85% 20%, rgba(232, 176, 35, 0.08), transparent 55%),
+    radial-gradient(900px 600px at 50% 100%, rgba(232, 176, 35, 0.1), transparent 60%),
+    linear-gradient(180deg, rgba(232, 176, 35, 0.03) 0%, transparent 40%);
 }
 
 .hero-waveform {
@@ -311,7 +303,6 @@ body::before {
   height: 60px;
   opacity: 0.35;
   pointer-events: none;
-  z-index: 1;
 }
 .hero-waveform span {
   display: block;
@@ -326,7 +317,7 @@ body::before {
   50% { height: 42px; opacity: 1; }
 }
 
-.hero-inner { max-width: 880px; position: relative; z-index: 2; }
+.hero-inner { max-width: 880px; }
 
 .hero-name {
   font-family: var(--font-display);
@@ -375,7 +366,6 @@ body::before {
   display: flex;
   justify-content: center;
   padding-top: 8px;
-  z-index: 2;
 }
 .scroll-cue span {
   width: 4px; height: 8px;
@@ -657,67 +647,11 @@ body::before {
   font-family: var(--font-display);
   font-weight: 500;
   font-style: italic;
-  font-size: clamp(1.1rem, 2.0vw, 1.55rem); /* Scaled down content text layout for premium professional scannability */
+  font-size: clamp(1.05rem, 1.8vw, 1.5rem);
   line-height: 1.6;
   max-width: 720px;
   margin: 0 auto;
-  color: var(--color-text-dim);
-}
-
-/* ---------- Contact Form Layout Rules ---------- */
-.contact-form {
-  max-width: 760px;
-  margin: 40px auto 48px auto;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: clamp(24px, 4vw, 40px);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-.form-group {
-  margin-bottom: 24px;
-  text-align: left;
-}
-.form-label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-dim);
-  margin-bottom: 10px;
-}
-.form-control {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 14px 18px;
   color: var(--color-text);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
-}
-.form-control:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px var(--color-accent-dim);
-}
-.form-control::placeholder {
-  color: var(--color-text-faint);
-  opacity: 0.6;
-}
-.form-submit-btn {
-  width: auto;
-  min-width: 160px;
-  justify-content: center;
-  border-radius: 8px;
 }
 
 /* ---------- Contact ---------- */
@@ -766,6 +700,63 @@ body::before {
   font-size: 0.78rem;
   color: var(--color-text-faint);
   font-family: var(--font-mono);
+}
+
+/* ---------- Contact Form ---------- */
+.contact-form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 640px;
+}
+.form-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.form-field {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-field label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}
+.form-field .required { color: var(--color-accent); }
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  background: var(--color-surface);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 13px 16px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  resize: vertical;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--color-text-faint);
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background: var(--color-surface-strong);
+}
+.contact-form .btn {
+  align-self: flex-start;
 }
 
 /* ---------- Lightbox ---------- */
@@ -829,6 +820,9 @@ body::before {
 }
 
 /* ---------- Scroll reveal ---------- */
+/* Visible by default — the hidden/animated state only applies once JS
+   confirms it has successfully initialized (html.js-ready class added).
+   This guarantees text is never stuck invisible if a script fails to load. */
 .reveal-up {
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
@@ -860,7 +854,6 @@ html.js-ready .reveal-up.in-view {
 }
 
 @media (max-width: 780px) {
-  .form-grid { grid-template-columns: 1fr; gap: 0; }
   .nav-links {
     position: fixed;
     top: 64px; left: 0; right: 0;
@@ -888,6 +881,6 @@ html.js-ready .reveal-up.in-view {
 
 @media (max-width: 480px) {
   body { font-size: 15.5px; }
-  .section-title { font-size: 1.5rem; }
+  .section-title { font-size: 1.8rem; }
   .hero-headline { font-size: 1.3rem; }
 }
