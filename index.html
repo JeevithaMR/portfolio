@@ -27,7 +27,6 @@
       <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="#about" class="nav-link" data-nav>About</a>
         <a href="#academics" class="nav-link" data-nav>Academics</a>
-        <a href="#skills" class="nav-link" data-nav>Skills</a>
         <a href="#projects" class="nav-link" data-nav>Projects</a>
         <a href="#awards" class="nav-link" data-nav>Achievements</a>
         <a href="#contact" class="nav-link" data-nav>Contact</a>
@@ -43,7 +42,6 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="home">
-      <div class="hero-bg-glow" aria-hidden="true"></div>
       <div class="hero-waveform" id="heroWaveform" aria-hidden="true"></div>
       <div class="section-inner hero-inner">
         <p class="hero-name reveal-up">Jeevitha MR</p>
@@ -219,20 +217,21 @@
       </div>
     </section>
 
-    <!-- ===================== FEATURED PRESENTATION ===================== -->
-    <section class="section" id="featured-talk">
+    <!-- ===================== A DEFINING MOMENT (TED-Ed) ===================== -->
+    <section class="section" id="defining-moment">
       <div class="section-inner">
-        <p class="eyebrow reveal-up">Featured Presentation</p>
-        <h2 class="section-title reveal-up">Keynote Platforms</h2>
+        <p class="eyebrow reveal-up">A Defining Moment</p>
+        <h2 class="section-title reveal-up">A Stage Not Everyone Gets</h2>
 
         <article class="spotlight-card reveal-up">
-          <img src="assets/images/speaking/ted-ed-logo.png" alt="TED-Ed Student Talks logo" class="spotlight-logo" />
+          <img src="assets/images/awards/ted-ed-logo.png" alt="TED-Ed Student Talks logo" class="spotlight-logo" />
           <p class="mini-label">TED-Ed Student Talks</p>
           <h3 class="card-title">The Power of Belief: Exploring the Superstitions</h3>
           <p class="body-md">
-            I spoke about the superstitions we quietly follow — where they come from, how they take
-            root across generations, and the case for weighing both their positive and negative
-            influence rather than dismissing them outright.
+            TED-Ed Student Talks is a rare opportunity, not open to everyone — and I was chosen to
+            speak on the superstitions we quietly follow: where they come from, how they take root
+            across generations, and the case for weighing both their positive and negative influence
+            rather than dismissing them outright.
           </p>
           <a href="assets/documents/ted-ed-talk.pdf" target="_blank" rel="noopener" class="btn-view">View PPT</a>
         </article>
@@ -565,25 +564,6 @@
           Open to conversations about opportunities, ideas, or collaborations. Reach out any time.
         </p>
 
-        <!-- Dynamic Message Form -->
-        <form class="contact-form reveal-up" id="contactForm" data-delay="1.5" action="mailto:jeevithamr@gmail.com" method="post" enctype="text/plain">
-          <div class="form-grid">
-            <div class="form-group">
-              <label for="formName" class="form-label">Full Name</label>
-              <input type="text" id="formName" name="Name" class="form-control" placeholder="Your name" required />
-            </div>
-            <div class="form-group">
-              <label for="formEmail" class="form-label">Email Address</label>
-              <input type="email" id="formEmail" name="Email" class="form-control" placeholder="yourname@example.com" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="formMessage" class="form-label">Your Message</label>
-            <textarea id="formMessage" name="Message" class="form-control" rows="5" placeholder="Write your thoughts here..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary form-submit-btn">Send Message</button>
-        </form>
-
         <div class="contact-row reveal-up" data-delay="2">
           <a href="mailto:jeevithamr@gmail.com" class="contact-link">
             <span class="contact-label">Email</span>
@@ -595,9 +575,31 @@
           </a>
           <a href="#" class="contact-link" data-social="instagram">
             <span class="contact-label">Instagram</span>
-            <span class="contact-value">@jeevitha</span>
+            <span class="contact-value">@jeevitha31</span>
           </a>
         </div>
+
+        <form class="contact-form reveal-up" id="contactForm" data-delay="3">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Email <span class="required">*</span></label>
+              <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
       </div>
     </section>
 
