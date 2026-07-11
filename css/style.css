@@ -28,7 +28,7 @@
 
   /* Layout */
   --max-width: 1180px;
-  --section-pad-y: clamp(36px, 5vw, 68px);
+  --section-pad-y: clamp(28px, 4vw, 52px);
   --radius-md: 14px;
   --radius-lg: 22px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -69,9 +69,9 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(1200px 600px at 15% 0%, rgba(232, 176, 35, 0.05), transparent 60%),
-    radial-gradient(900px 500px at 85% 40%, rgba(232, 176, 35, 0.035), transparent 55%),
-    radial-gradient(1000px 700px at 50% 100%, rgba(232, 176, 35, 0.04), transparent 60%);
+    radial-gradient(1100px 650px at 18% 0%, rgba(232, 176, 35, 0.08), transparent 62%),
+    radial-gradient(900px 550px at 85% 25%, rgba(232, 176, 35, 0.05), transparent 58%),
+    radial-gradient(1000px 700px at 50% 100%, rgba(232, 176, 35, 0.045), transparent 60%);
 }
 
 .section-inner {
@@ -87,22 +87,24 @@ body::before {
 
 /* ---------- Typography ---------- */
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 1.05rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin-bottom: 18px;
+  font-family: var(--font-display);
   font-weight: 700;
+  font-size: clamp(1.9rem, 3.8vw, 2.8rem);
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--color-accent);
+  margin-bottom: 10px;
 }
 
 .section-title {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(2rem, 4vw, 3rem);
-  letter-spacing: -0.01em;
-  margin-bottom: 32px;
-  max-width: 22ch;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.98rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  margin-bottom: 28px;
+  max-width: 30ch;
 }
 
 .mini-label {
@@ -280,16 +282,20 @@ body::before {
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
+.hero-accent-corner {
   position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    radial-gradient(700px 500px at 20% 15%, rgba(232, 176, 35, 0.14), transparent 60%),
-    radial-gradient(600px 450px at 85% 20%, rgba(232, 176, 35, 0.08), transparent 55%),
-    radial-gradient(900px 600px at 50% 100%, rgba(232, 176, 35, 0.1), transparent 60%),
-    linear-gradient(180deg, rgba(232, 176, 35, 0.03) 0%, transparent 40%);
+  width: 64px;
+  height: 64px;
+  border: 1.5px solid rgba(232, 176, 35, 0.35);
+  pointer-events: none;
+}
+.hero-accent-corner.top-left {
+  top: 48px; left: 32px;
+  border-right: none; border-bottom: none;
+}
+.hero-accent-corner.bottom-right {
+  bottom: 48px; right: 32px;
+  border-left: none; border-top: none;
 }
 
 .hero-waveform {
@@ -881,6 +887,6 @@ html.js-ready .reveal-up.in-view {
 
 @media (max-width: 480px) {
   body { font-size: 15.5px; }
-  .section-title { font-size: 1.8rem; }
+  .eyebrow { font-size: 1.6rem; }
   .hero-headline { font-size: 1.3rem; }
 }
