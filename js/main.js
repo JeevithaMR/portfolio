@@ -135,8 +135,6 @@
     var rotatingEl = document.getElementById("rotatingSkill");
     if (!rotatingEl) return;
     var idx = 0;
-    
-    // Hardened looping mechanism ensures continuous cycling without hanging
     setInterval(function () {
       rotatingEl.classList.add("fade");
       setTimeout(function () {
@@ -144,7 +142,7 @@
         rotatingEl.textContent = rotatingWords[idx];
         rotatingEl.classList.remove("fade");
       }, 350);
-    }, 2500); // Ticker updates seamlessly every 2.5 seconds
+    }, 3000);
   });
 
   /* ---------- Lightbox ---------- */
@@ -202,4 +200,29 @@
       if (e.key === "Escape") closeLightbox();
     });
   });
+
+  /* ---------- Contact form (opens visitor's email app) ---------- */
+  var contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var name = contactForm.name.value.trim();
+      var email = contactForm.email.value.trim();
+      var subject = contactForm.subject.value.trim() || "Portfolio Contact";
+      var message = contactForm.message.value.trim();
+
+      var body =
+        (name ? "Name: " + name + "\n" : "") +
+        "Email: " + email + "\n\n" +
+        message;
+
+      var mailtoLink =
+        "mailto:jeevithamr@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      window.location.href = mailtoLink;
+    });
+  }
 })();
