@@ -99,7 +99,7 @@ body::before {
 .section-title {
   font-family: var(--font-mono);
   font-weight: 500;
-  font-size: 0.98rem;
+  font-size: 1.02rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text-dim);
