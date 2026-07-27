@@ -282,22 +282,6 @@ body::before {
   overflow: hidden;
 }
 
-.hero-accent-corner {
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  border: 1.5px solid rgba(232, 176, 35, 0.35);
-  pointer-events: none;
-}
-.hero-accent-corner.top-left {
-  top: 48px; left: 32px;
-  border-right: none; border-bottom: none;
-}
-.hero-accent-corner.bottom-right {
-  bottom: 48px; right: 32px;
-  border-left: none; border-top: none;
-}
-
 .hero-waveform {
   position: absolute;
   bottom: 14%;
