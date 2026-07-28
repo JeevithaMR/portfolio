@@ -622,11 +622,12 @@ body::before {
 .victory-bronze .victory-prize { color: var(--color-bronze); }
 
 /* ---------- Beyond Work ---------- */
-.beyond-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-.beyond-block { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 28px; }
-.fun-fact-card {
-  grid-column: 1 / -1;
-  padding: 24px 28px;
+.beyond-block,
+.visionx-block {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
   display: flex; align-items: center; gap: 16px;
 }
 .fun-fact-icon { font-size: 1.8rem; }
