@@ -601,6 +601,13 @@
             <textarea id="cf-message" name="message" rows="5" placeholder="Write your message here..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
+          <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="cbc641d2-f951-4823-b6ff-09f7ef29726e">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+  <button type="submit">Submit</button>
+</form>
         </form>
       </div>
     </section>
