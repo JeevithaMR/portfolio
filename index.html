@@ -1,528 +1,645 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeevitha M R — Personal Portfolio</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeevitha MR — Portfolio</title>
+  <meta name="description" content="Jeevitha MR — Building meaningful ideas through Leadership, Creativity, and Innovation. A portfolio of academic work, leadership, speaking, and achievements." />
+  <meta name="author" content="Jeevitha MR" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jeevitha MR — Portfolio" />
+  <meta property="og:description" content="Building meaningful ideas through leadership, creativity, and innovation." />
+  <meta property="og:type" content="website" />
+
+<link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-obsidian text-sand-light antialiased selection:bg-amber-gold selection:text-obsidian relative overflow-x-hidden">
+<body>
 
-    <!-- Scroll Progress Indicator Dots -->
-    <nav class="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-4 items-center" id="scrollNav">
-        <a href="#hero" class="scroll-dot active" data-title="Home"><span></span></a>
-        <a href="#about" class="scroll-dot" data-title="About"><span></span></a>
-        <a href="#education" class="scroll-dot" data-title="Education"><span></span></a>
-        <a href="#skills" class="scroll-dot" data-title="Skills"><span></span></a>
-        <a href="#defining-moment" class="scroll-dot" data-title="Defining Moment"><span></span></a>
-        <a href="#projects" class="scroll-dot" data-title="Projects"><span></span></a>
-        <a href="#experience" class="scroll-dot" data-title="Experience"><span></span></a>
-        <a href="#certifications" class="scroll-dot" data-title="Certifications"><span></span></a>
-        <a href="#awards" class="scroll-dot" data-title="Awards"><span></span></a>
-        <a href="#speaking" class="scroll-dot" data-title="Speaking"><span></span></a>
-        <a href="#interests" class="scroll-dot" data-title="Interests"><span></span></a>
-        <a href="#vision" class="scroll-dot" data-title="Vision"><span></span></a>
-        <a href="#contact" class="scroll-dot" data-title="Contact"><span></span></a>
-    </nav>
+  <!-- Scroll progress / signal line -->
+  <div class="signal-progress" id="signalProgress" aria-hidden="true"></div>
 
-    <!-- Global Floating Ambient Background Particles -->
-    <div id="particles-container" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a href="#home" class="nav-logo" aria-label="Jeevitha MR — Home">JM<span class="dot">R</span></a>
 
-    <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-obsidian/80 border-b border-white/5 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#hero" class="text-xl font-serif font-bold tracking-wider text-amber-gold hover:opacity-80 transition-opacity">
-                JEEVITHA M R
-            </a>
-            <nav class="hidden md:flex items-center gap-8 text-xs tracking-widest uppercase text-sand-muted font-mono">
-                <a href="#about" class="hover:text-amber-gold transition-colors">About</a>
-                <a href="#education" class="hover:text-amber-gold transition-colors">Academic</a>
-                <a href="#skills" class="hover:text-amber-gold transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-amber-gold transition-colors">Projects</a>
-                <a href="#contact" class="hover:text-amber-gold transition-colors">Contact</a>
-            </nav>
-            <button class="md:hidden text-sand-light hover:text-amber-gold text-xl focus:outline-none" id="mobileMenuBtn" aria-label="Toggle menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-    </header>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#about" class="nav-link" data-nav>About</a>
+        <a href="#academics" class="nav-link" data-nav>Academics</a>
+        <a href="#projects" class="nav-link" data-nav>Projects</a>
+        <a href="#awards" class="nav-link" data-nav>Achievements</a>
+        <a href="#contact" class="nav-link" data-nav>Contact</a>
+      </nav>
 
-    <main class="relative z-10 pt-20">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
-        <!-- 01 HERO SECTION -->
-        <section id="hero" class="min-h-[85vh] flex items-center justify-center relative px-6 py-12">
-            <!-- Professional Hero Corner Accents -->
-            <div class="hero-corner hero-corner-tl"></div>
-            <div class="hero-corner hero-corner-br"></div>
+  <main>
 
-            <div class="max-w-4xl mx-auto text-center space-y-6">
-                <p class="eyebrow text-amber-gold font-mono tracking-widest uppercase">Commerce Student & Aspiring Leader</p>
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-white hero-title">
-                    Jeevitha M R
-                </h1>
-                <div class="h-12 flex items-center justify-center">
-                    <p class="text-lg md:text-xl text-sand-muted font-sans font-light">
-                        Driven by <span class="rotating-skill text-amber-gold font-medium">Leadership</span>
-                    </p>
-                </div>
-                <p class="max-w-2xl mx-auto text-sand-muted text-sm md:text-base leading-relaxed font-sans">
-                    Blending academic rigor in commerce with dynamic event management, leadership roles, and strategic vision to drive meaningful impact.
-                </p>
-                <div class="pt-6 flex flex-wrap items-center justify-center gap-4">
-                    <a href="#contact" class="px-8 py-3 bg-amber-gold text-obsidian font-semibold rounded-full hover:bg-amber-light transition-all shadow-lg shadow-amber-gold/10 hover:scale-105">
-                        Get in Touch <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                    <a href="#projects" class="px-8 py-3 border border-white/20 text-sand-light font-medium rounded-full hover:border-amber-gold hover:text-amber-gold transition-all">
-                        View Work
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-gem text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 02 ABOUT SECTION -->
-        <section id="about" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="01">
-            <span class="watermark-num">01</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">About</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Who I Am</h2>
-            </div>
-            <div class="glass-card p-8 md:p-12 rounded-2xl border border-white/10 relative overflow-hidden">
-                <div class="space-y-6 text-sand-light text-base md:text-lg leading-relaxed font-sans">
-                    <p>
-                        I am a passionate Commerce student with a deep interest in management, organization, and social initiative. My journey is defined by a relentless drive to go beyond textbook learning—actively organizing events, leading academic teams, and speaking on public platforms.
-                    </p>
-                    <p>
-                        Whether anchoring a large-scale institution gathering or crafting strategic solutions for real-world projects, I thrive at the intersection of structure, creativity, and purpose-driven execution.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-book-open text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 03 EDUCATION SECTION -->
-        <section id="education" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="02">
-            <span class="watermark-num">02</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Academic Journey</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Education & Foundations</h2>
-            </div>
-            <div class="space-y-6">
-                <div class="glass-card p-6 md:p-8 rounded-xl border border-white/10 flex flex-col md:flex-row justify-between md:items-center gap-4">
-                    <div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-graduation-cap text-amber-gold text-lg"></i>
-                            <h3 class="text-xl font-serif font-bold text-white">Pre-University Education (2nd PUC Commerce)</h3>
-                        </div>
-                        <p class="text-sand-muted text-sm mt-1">Focus on Accountancy, Business Studies, Economics, and Statistics</p>
-                    </div>
-                    <div class="text-left md:text-right">
-                        <span class="inline-block px-3 py-1 bg-amber-gold/10 text-amber-gold text-xs font-mono rounded-full border border-amber-gold/20">Completed</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-layer-group text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 04 SKILLS SECTION -->
-        <section id="skills" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="03">
-            <span class="watermark-num">03</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Skills & Expertise</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Capabilities</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="glass-card p-6 rounded-xl border border-white/10 hover:border-amber-gold/40 transition-all">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fa-solid fa-users-gear text-amber-gold text-xl"></i>
-                        <h3 class="font-serif font-bold text-lg text-white">Management</h3>
-                    </div>
-                    <ul class="space-y-2 text-sm text-sand-muted font-sans">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Event Organization</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Team Leadership</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Public Speaking & Anchoring</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Strategic Planning</li>
-                    </ul>
-                </div>
-                <div class="glass-card p-6 rounded-xl border border-white/10 hover:border-amber-gold/40 transition-all">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fa-solid fa-chart-pie text-amber-gold text-xl"></i>
-                        <h3 class="font-serif font-bold text-lg text-white">Commerce & Core</h3>
-                    </div>
-                    <ul class="space-y-2 text-sm text-sand-muted font-sans">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Financial Fundamentals</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Business Analytics Concept</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Market Analysis</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Operational Execution</li>
-                    </ul>
-                </div>
-                <div class="glass-card p-6 rounded-xl border border-white/10 hover:border-amber-gold/40 transition-all">
-                    <div class="flex items-center gap-3 mb-4">
-                        <i class="fa-solid fa-brain text-amber-gold text-xl"></i>
-                        <h3 class="font-serif font-bold text-lg text-white">Interpersonal</h3>
-                    </div>
-                    <ul class="space-y-2 text-sm text-sand-muted font-sans">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Effective Communication</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Critical Problem Solving</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Adaptability & Agility</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-xs text-amber-gold"></i> Conflict Resolution</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-star text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 05 DEFINING MOMENT (TED-ED SPOTLIGHT) -->
-        <section id="defining-moment" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="04">
-            <span class="watermark-num">04</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">A Defining Moment</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Key Milestone</h2>
-            </div>
-            <div class="glass-card p-8 md:p-10 rounded-2xl border border-amber-gold/30 bg-gradient-to-br from-amber-gold/5 via-transparent to-transparent relative overflow-hidden">
-                <div class="flex flex-col md:flex-row items-center gap-8">
-                    <div class="w-24 h-24 rounded-2xl bg-white/5 border border-amber-gold/30 flex items-center justify-center shrink-0 p-4">
-                        <img src="assets/images/awards/ted-ed.png" alt="TED-Ed Logo" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=TED-Ed';">
-                    </div>
-                    <div class="space-y-4 text-center md:text-left">
-                        <div class="inline-block px-3 py-1 bg-amber-gold/10 text-amber-gold text-xs font-mono rounded-full border border-amber-gold/20">
-                            Rare Opportunity & Achievement
-                        </div>
-                        <h3 class="text-2xl font-serif font-bold text-white">TED-Ed Speaker Presentation</h3>
-                        <p class="text-sand-muted text-sm md:text-base leading-relaxed font-sans">
-                            Delivered an impactful TED-Ed talk, synthesizing complex ideas into a compelling narrative on leadership and continuous personal evolution. A selective privilege that shaped my confidence and public voice.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-laptop-code text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 06 PROJECTS SECTION -->
-        <section id="projects" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="05">
-            <span class="watermark-num">05</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Featured Projects</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Initiatives & Portfolio</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card p-6 rounded-xl border border-white/10 space-y-4 hover:border-amber-gold/30 transition-all">
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-mono text-amber-gold uppercase">Academic Project</span>
-                        <i class="fa-solid fa-briefcase text-sand-muted"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-bold text-white">Commerce & Trade Analysis</h3>
-                    <p class="text-sm text-sand-muted leading-relaxed font-sans">
-                        Comprehensive study examining local merchant export opportunities and trade workflows to identify key structural growth areas.
-                    </p>
-                </div>
-                <div class="glass-card p-6 rounded-xl border border-white/10 space-y-4 hover:border-amber-gold/30 transition-all">
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-mono text-amber-gold uppercase">Event Strategy</span>
-                        <i class="fa-solid fa-clipboard-check text-sand-muted"></i>
-                    </div>
-                    <h3 class="text-xl font-serif font-bold text-white">Youth Leadership Summit</h3>
-                    <p class="text-sm text-sand-muted leading-relaxed font-sans">
-                        Conceptualized and coordinated a student summit aimed at building core managerial competencies among high school and college peers.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-building-user text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 07 EXPERIENCE SECTION -->
-        <section id="experience" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="06">
-            <span class="watermark-num">06</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Experience</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Practical Engagement</h2>
-            </div>
-            <div class="glass-card p-8 rounded-xl border border-white/10 space-y-4">
-                <div class="flex flex-col md:flex-row justify-between md:items-center gap-2">
-                    <h3 class="text-xl font-serif font-bold text-white">Student Coordinator & Representative</h3>
-                    <span class="text-xs font-mono text-amber-gold">Academic Institutions</span>
-                </div>
-                <p class="text-sm text-sand-muted leading-relaxed font-sans">
-                    Led student initiatives, liaised between faculty and students, and managed logistical planning for major college events and formal functions.
-                </p>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-certificate text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 08 CERTIFICATIONS SECTION -->
-        <section id="certifications" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="07">
-            <span class="watermark-num">07</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Certifications</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Continuous Learning</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Cert 1 -->
-                <div class="glass-card p-6 rounded-xl border border-white/10 hover:border-amber-gold/30 transition-all flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="h-40 rounded-lg overflow-hidden bg-white/5 border border-white/10 relative">
-                            <img src="assets/images/certifications/cert1.png" alt="Certificate Thumbnail" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x200?text=Certificate+Preview';">
-                        </div>
-                        <h3 class="font-serif font-bold text-lg text-white">Business & Management Certificate</h3>
-                        <p class="text-xs text-sand-muted font-mono">Issued by Recognized Learning Provider</p>
-                    </div>
-                </div>
-                <!-- Cert 2 -->
-                <div class="glass-card p-6 rounded-xl border border-white/10 hover:border-amber-gold/30 transition-all flex flex-col justify-between space-y-4">
-                    <div class="space-y-3">
-                        <div class="h-40 rounded-lg overflow-hidden bg-white/5 border border-white/10 relative">
-                            <img src="assets/images/certifications/cert2.png" alt="Certificate Thumbnail" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/400x200?text=Certificate+Preview';">
-                        </div>
-                        <h3 class="font-serif font-bold text-lg text-white">Digital Literacy & Tools</h3>
-                        <p class="text-xs text-sand-muted font-mono">Issued by Online Certification Board</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-trophy text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 09 AWARDS SECTION -->
-        <section id="awards" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="08">
-            <span class="watermark-num">08</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Awards & Honors</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Recognition</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card p-6 rounded-xl border border-white/10 flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-lg bg-white/5 border border-white/10 overflow-hidden shrink-0">
-                        <img src="assets/images/awards/award1.png" alt="Award Thumbnail" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/100?text=Award';">
-                    </div>
-                    <div>
-                        <h3 class="font-serif font-bold text-base text-white">Academic Excellence Recognition</h3>
-                        <p class="text-xs text-sand-muted mt-1">Honored for exceptional scholastic performance and consistency.</p>
-                    </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl border border-white/10 flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-lg bg-white/5 border border-white/10 overflow-hidden shrink-0">
-                        <img src="assets/images/awards/award2.png" alt="Award Thumbnail" class="w-full h-full object-cover" onerror="this.src='https://via.placeholder.com/100?text=Award';">
-                    </div>
-                    <div>
-                        <h3 class="font-serif font-bold text-base text-white">Leadership & Service Honor</h3>
-                        <p class="text-xs text-sand-muted mt-1">Awarded for proactive contributions to student events and management.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-microphone text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 10 SPEAKING SECTION -->
-        <section id="speaking" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="09">
-            <span class="watermark-num">09</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Speaking & Leadership</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Public Engagements</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card p-6 rounded-xl border border-white/10 space-y-3">
-                    <i class="fa-solid fa-bullhorn text-amber-gold text-2xl"></i>
-                    <h3 class="text-lg font-serif font-bold text-white">Master of Ceremonies</h3>
-                    <p class="text-sm text-sand-muted leading-relaxed">
-                        Anchored multiple high-profile institution ceremonies, maintaining audience engagement and seamless event transitions.
-                    </p>
-                </div>
-                <div class="glass-card p-6 rounded-xl border border-white/10 space-y-3">
-                    <i class="fa-solid fa-lightbulb text-amber-gold text-2xl"></i>
-                    <h3 class="text-lg font-serif font-bold text-white">VisionX Platform</h3>
-                    <p class="text-sm text-sand-muted leading-relaxed">
-                        Participated actively in student dialogue forums addressing future-readiness and organizational skills.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-compass text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 11 INTERESTS SECTION -->
-        <section id="interests" class="py-16 px-6 max-w-5xl mx-auto relative" data-num="10">
-            <span class="watermark-num">10</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Interests</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Beyond Work</h2>
-            </div>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="px-5 py-2 glass-card rounded-full border border-white/10 text-sm text-sand-light flex items-center gap-2 hover:border-amber-gold/40 transition-all">
-                    <i class="fa-solid fa-book-reader text-amber-gold"></i> Strategic Reading
-                </span>
-                <span class="px-5 py-2 glass-card rounded-full border border-white/10 text-sm text-sand-light flex items-center gap-2 hover:border-amber-gold/40 transition-all">
-                    <i class="fa-solid fa-globe text-amber-gold"></i> Global Trade & Commerce
-                </span>
-                <span class="px-5 py-2 glass-card rounded-full border border-white/10 text-sm text-sand-light flex items-center gap-2 hover:border-amber-gold/40 transition-all">
-                    <i class="fa-solid fa-person-chalkboard text-amber-gold"></i> Event Hosting
-                </span>
-                <span class="px-5 py-2 glass-card rounded-full border border-white/10 text-sm text-sand-light flex items-center gap-2 hover:border-amber-gold/40 transition-all">
-                    <i class="fa-solid fa-hand-holding-heart text-amber-gold"></i> Community Initiatives
-                </span>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-eye text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 12 VISION SECTION -->
-        <section id="vision" class="py-16 px-6 max-w-4xl mx-auto text-center relative" data-num="11">
-            <span class="watermark-num">11</span>
-            <div class="mb-10">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Future Vision</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Looking Ahead</h2>
-            </div>
-            <div class="glass-card p-8 md:p-12 rounded-2xl border border-white/10 relative">
-                <i class="fa-solid fa-quote-left text-3xl text-amber-gold/20 absolute top-6 left-6"></i>
-                <blockquote class="text-base md:text-lg italic text-sand-light leading-relaxed font-sans max-w-2xl mx-auto relative z-10">
-                    "To build a career grounded in ethical leadership, continuous expansion of managerial insight, and high-impact contributions in global business and export domain."
-                </blockquote>
-            </div>
-        </section>
-
-        <!-- Ornamental Section Divider -->
-        <div class="section-divider">
-            <div class="divider-line"></div>
-            <div class="divider-diamond"><i class="fa-solid fa-paper-plane text-xs text-amber-gold/60"></i></div>
-            <div class="divider-line"></div>
-        </div>
-
-        <!-- 13 CONTACT SECTION -->
-        <section id="contact" class="py-16 px-6 max-w-4xl mx-auto relative" data-num="12">
-            <span class="watermark-num">12</span>
-            <div class="mb-10 text-center">
-                <p class="eyebrow text-3xl md:text-4xl font-serif font-bold text-amber-gold">Contact</p>
-                <h2 class="section-title text-xs font-mono uppercase tracking-widest text-sand-muted mt-1">Let's Connect</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Info Column -->
-                <div class="space-y-6">
-                    <div class="glass-card p-6 rounded-xl border border-white/10 space-y-4">
-                        <h3 class="text-lg font-serif font-bold text-white">Reach Out Directly</h3>
-                        <p class="text-sm text-sand-muted leading-relaxed">
-                            Feel free to connect for opportunities, collaborations, or discussions on commerce and event management.
-                        </p>
-                        <div class="space-y-3 pt-2">
-                            <a href="mailto:jeevithamr@example.com" class="flex items-center gap-3 text-sm text-sand-light hover:text-amber-gold transition-colors">
-                                <i class="fa-solid fa-envelope text-amber-gold"></i> jeevithamr@example.com
-                            </a>
-                            <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm text-sand-light hover:text-amber-gold transition-colors">
-                                <i class="fa-brands fa-linkedin text-amber-gold"></i> LinkedIn Profile
-                            </a>
-                            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-sm text-sand-light hover:text-amber-gold transition-colors">
-                                <i class="fa-brands fa-instagram text-amber-gold"></i> Instagram Profile
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web3Forms Direct Inbox Form -->
-                <div class="glass-card p-6 rounded-xl border border-white/10">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4" id="contactForm">
-                        <!-- REPLACE WITH YOUR WEB3FORMS ACCESS KEY -->
-                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
-                        <input type="hidden" name="subject" value="New Contact Form Submission from Portfolio">
-                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                        <div>
-                            <label for="name" class="block text-xs font-mono text-sand-muted uppercase mb-1">Your Name</label>
-                            <input type="text" id="name" name="name" required class="w-full bg-obsidian/60 border border-white/10 rounded-lg px-4 py-2 text-sm text-sand-light focus:outline-none focus:border-amber-gold transition-colors">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-xs font-mono text-sand-muted uppercase mb-1">Your Email</label>
-                            <input type="email" id="email" name="email" required class="w-full bg-obsidian/60 border border-white/10 rounded-lg px-4 py-2 text-sm text-sand-light focus:outline-none focus:border-amber-gold transition-colors">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-xs font-mono text-sand-muted uppercase mb-1">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full bg-obsidian/60 border border-white/10 rounded-lg px-4 py-2 text-sm text-sand-light focus:outline-none focus:border-amber-gold transition-colors"></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full py-3 bg-amber-gold text-obsidian font-semibold rounded-lg hover:bg-amber-light transition-all shadow-md shadow-amber-gold/10">
-                            Send Message <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-8 border-t border-white/5 text-center relative z-10">
-        <p class="text-xs font-mono text-sand-muted">
-            &copy; 2026 Jeevitha M R. All rights reserved. Built with precision & elegance.
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+      <span class="hero-accent-corner top-left" aria-hidden="true"></span>
+      <span class="hero-accent-corner bottom-right" aria-hidden="true"></span>
+      <div class="hero-waveform" id="heroWaveform" aria-hidden="true"></div>
+      <div class="section-inner hero-inner">
+        <p class="hero-name reveal-up">Jeevitha MR</p>
+        <h1 class="hero-headline reveal-up" data-delay="1">
+          Building meaningful ideas through <span class="accent-text">leadership</span>,
+          <span class="accent-text">creativity</span>, and <span class="accent-text">innovation</span>.
+        </h1>
+        <p class="hero-sub reveal-up" data-delay="2">
+          I solve real problems with curiosity and initiative — leading teams, researching markets,
+          and stepping on stage to speak, rather than letting a single title define me.
         </p>
-    </footer>
+        <div class="hero-actions reveal-up" data-delay="3">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+        <span></span>
+      </a>
+    </section>
 
-    <script src="main.js"></script>
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">About</p>
+        <div class="about-grid">
+          <div class="about-text reveal-up">
+            <h2 class="section-title">Who Am I?</h2>
+            <p class="body-lg">
+              I'm someone who enjoys solving meaningful business and real-world problems through
+              creativity, leadership, curiosity, and continuous learning. I don't define myself by a
+              degree or a single profession — I'd rather let my work and experiences speak for themselves.
+              Whether it's leading a team, researching a market, or stepping on stage to speak, I bring
+              the same mindset: stay curious, stay adaptable, and keep building.
+            </p>
+            <p class="body-lg" style="margin-top: 20px;">
+              Most of what I know, I've picked up by actually doing the work — leading college teams
+              through real business simulations, digging into markets no one asked me to research, and
+              saying yes to opportunities that pushed me a little further each time. I'm comfortable
+              switching between roles: the person analyzing a spreadsheet one day, and the one hosting
+              a stage in front of a few hundred people the next.
+            </p>
+            <p class="body-lg" style="margin-top: 20px;">
+              I think a lot about how businesses actually work — not just the theory of it, but the
+              messy, practical side: how a team stays motivated, how a pitch lands, how a market
+              actually behaves once real people are involved. That curiosity is what pulls me toward
+              new tools, new certifications, and new rooms to walk into.
+            </p>
+
+            <div class="languages-block">
+              <p class="mini-label">Languages I Speak</p>
+              <div class="lang-row">
+                <div class="lang-item"><span class="lang-name">English</span><span class="lang-level">Fluent</span></div>
+                <div class="lang-item"><span class="lang-name">Kannada</span><span class="lang-level">Native</span></div>
+                <div class="lang-item"><span class="lang-name">Hindi</span><span class="lang-level">Conversational</span></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="about-card reveal-up" data-delay="1">
+            <p class="mini-label">What Drives Me</p>
+            <div class="rotating-skill" id="rotatingSkill" aria-live="polite">Leadership</div>
+            <ul class="soft-skill-list">
+              <li>Strategic Thinking</li>
+              <li>Public Speaking</li>
+              <li>Problem Solving</li>
+              <li>Adaptability</li>
+              <li>Teamwork</li>
+              <li>Initiative</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACADEMIC JOURNEY ===================== -->
+    <section class="section" id="academics">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Academic Journey</p>
+        <h2 class="section-title reveal-up">The Path So Far</h2>
+
+        <div class="timeline">
+          <div class="timeline-track" aria-hidden="true"></div>
+
+          <article class="timeline-item reveal-up">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <p class="mini-label">2024</p>
+              <h3 class="card-title">SSLC</h3>
+              <p class="card-meta">Sri Kannika English School, Tumkur</p>
+              <div class="stat-row">
+                <span class="stat-pill">90.72%</span>
+                <span class="stat-pill stat-pill-muted">567 Marks</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal-up" data-delay="1">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <p class="mini-label">2024 – 2026</p>
+              <h3 class="card-title">II PUC</h3>
+              <p class="card-meta">Sri Sapthagiri PU College, Tumkur · Commerce (CEBA)</p>
+              <div class="stat-row">
+                <span class="stat-pill">95.83%</span>
+                <span class="stat-pill stat-pill-muted">575 Marks</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal-up" data-delay="2">
+            <div class="timeline-node timeline-node-active"></div>
+            <div class="timeline-card">
+              <p class="mini-label">Currently Pursuing</p>
+              <h3 class="card-title">Bachelor of Business Administration</h3>
+              <p class="card-meta">Sheshadripuram Degree College, Tumkur</p>
+              <div class="stat-row">
+                <span class="stat-pill stat-pill-live">In Progress</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Skills</p>
+        <h2 class="section-title reveal-up">Engine Behind My Work</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal-up">
+            <p class="mini-label">Microsoft</p>
+            <div class="tag-row">
+              <span class="tag">Excel</span><span class="tag">Word</span><span class="tag">PowerPoint</span>
+              <span class="tag">OS Tools & Applications</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up" data-delay="1">
+            <p class="mini-label">Design</p>
+            <div class="tag-row">
+              <span class="tag">Canva</span><span class="tag">Graphic Design (Flyers, Posters &amp; Business Cards)</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up" data-delay="2">
+            <p class="mini-label">AI Tools</p>
+            <div class="tag-row">
+              <span class="tag">ChatGPT</span><span class="tag">Gemini</span><span class="tag">Claude</span><span class="tag">DeepSeek</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up">
+            <p class="mini-label">Business</p>
+            <div class="tag-row">
+              <span class="tag">Market Research</span><span class="tag">Market Analysis</span>
+              <span class="tag">Strategic Planning</span><span class="tag">Business Development</span>
+              <span class="tag">Client Outreach</span><span class="tag">Competitor &amp; Pricing Analysis</span>
+            </div>
+          </div>
+          <div class="skill-card reveal-up" data-delay="1">
+            <p class="mini-label">Writing &amp; Storytelling</p>
+            <div class="tag-row">
+              <span class="tag">Research Writing</span><span class="tag">Report Writing</span>
+              <span class="tag">Content Writing</span><span class="tag">Scriptwriting</span>
+            </div>
+          </div>
+          <div class="skill-card skill-card-learning reveal-up" data-delay="2">
+            <p class="mini-label">Currently Learning</p>
+            <div class="tag-row">
+              <span class="tag tag-learning">Data Analytics</span><span class="tag tag-learning">Power BI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== A DEFINING MOMENT (TED-Ed) ===================== -->
+    <section class="section" id="defining-moment">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">The TED-Ed Stage</p>
+        <h2 class="section-title reveal-up">Where Curiosity Found a Voice</h2>
+
+        <article class="spotlight-card reveal-up">
+          <img src="assets/images/awards/ted-ed-logo.png" alt="TED-Ed Student Talks logo" class="spotlight-logo" />
+          <p class="mini-label">TED-Ed Student Talks</p>
+          <h3 class="card-title">The Power of Belief: Exploring the Superstitions</h3>
+          <p class="body-md">
+            TED-Ed Student Talks is a rare opportunity, not open to everyone — and I was chosen to
+            speak on the superstitions we quietly follow: where they come from, how they take root
+            across generations, and the case for weighing both their positive and negative influence
+            rather than dismissing them outright.
+          </p>
+          <a href="assets/documents/ted-ed-talk.pdf" target="_blank" rel="noopener" class="btn-view">View PPT</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Featured Projects</p>
+        <h2 class="section-title reveal-up">Projects That Define My Journey</h2>
+
+        <div class="project-grid">
+          <article class="project-card reveal-up">
+            <div class="project-media project-media-logo">
+              <img src="assets/images/projects/lenskart-logo.png" alt="Lenskart logo" />
+            </div>
+            <div class="project-body">
+              <p class="mini-label">BOCS</p>
+              <h3 class="card-title">Lenskart</h3>
+              <p class="card-role">Team Leader</p>
+              <p class="body-md">
+                A study into how an established company functions from a business, marketing, and
+                financial perspective — including market research, financial statement analysis, SWOT
+                and strategy analysis, and a public awareness survey I designed and conducted myself.
+              </p>
+              <div class="tag-row tag-row-tight">
+                <span class="tag tag-outline">Market Research</span>
+                <span class="tag tag-outline">Financial Analysis</span>
+                <span class="tag tag-outline">SWOT</span>
+                <span class="tag tag-outline">Survey Design</span>
+              </div>
+              <div class="doc-links">
+                <a href="https://drive.google.com/file/d/13laFcLtRmRaDTkrT5iev0SwOqun2j4Wm/view?usp=sharing" target="_blank" rel="noopener" class="btn-view btn-view-sm">View Report</a>
+                <a href="assets/documents/lenskart-research-paper.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View Research Paper</a>
+                <a href="assets/documents/lenskart-ppt.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View PPT</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="1">
+            <div class="project-media project-media-logo">
+              <img src="assets/images/projects/wellnest-logo.png" alt="Wellnest logo" />
+            </div>
+            <div class="project-body">
+              <p class="mini-label">SEPME</p>
+              <h3 class="card-title">Wellnest</h3>
+              <p class="card-role">Team Leader</p>
+              <p class="body-md">
+                A virtual startup built from the ground up — realistic business planning, financials,
+                branding, pricing, marketing, and operations. I guided the team, managed report writing,
+                led presentations, and coordinated the overall execution.
+              </p>
+              <div class="tag-row tag-row-tight">
+                <span class="tag tag-outline">Startup Planning</span>
+                <span class="tag tag-outline">Pricing Strategy</span>
+                <span class="tag tag-outline">Financial Planning</span>
+              </div>
+              <div class="doc-links">
+                <a href="assets/documents/wellnest-report.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View Report</a>
+                <a href="assets/documents/wellnest-ppt.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View PPT</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-delay="2">
+            <div class="project-media project-media-logo">
+              <img src="assets/images/projects/freelancer-logo.png" alt="Freelancer logo" />
+            </div>
+            <div class="project-body">
+              <p class="mini-label">Freelancer</p>
+              <h3 class="card-title">Indore Market Analysis</h3>
+              <p class="card-role">Independent Researcher</p>
+              <p class="body-md">
+                The client wanted to set up a salon in Indore. I researched the local market —
+                competitors, pricing structures, and the most popular locations in the city — to
+                help guide their setup decision.
+              </p>
+              <div class="tag-row tag-row-tight">
+                <span class="tag tag-outline">Market Research</span>
+                <span class="tag tag-outline">Competitor Analysis</span>
+              </div>
+              <div class="doc-links">
+                <a href="assets/documents/indore-market-report.pdf" target="_blank" rel="noopener" class="btn-view btn-view-sm">View Report</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section class="section" id="certifications">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Certifications</p>
+        <h2 class="section-title reveal-up">Formal Learning</h2>
+
+        <div class="cert-grid">
+          <article class="cert-card reveal-up">
+            <div class="cert-badge">ACAS</div>
+            <h3 class="card-title-sm">Advance Computer Application Skills</h3>
+            <p class="card-meta">College Provided</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="ACAS Certificate" data-lightbox-src="assets/images/certifications/acas.jpg">View Certificate</button>
+          </article>
+          <article class="cert-card reveal-up" data-delay="1">
+            <div class="cert-badge">ACAS Pro</div>
+            <h3 class="card-title-sm">Advance Computer Application Skills Pro</h3>
+            <p class="card-meta">College Provided</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="ACAS Pro Certificate" data-lightbox-src="assets/images/certifications/acas-pro.jpg">View Certificate</button>
+          </article>
+          <article class="cert-card reveal-up" data-delay="2">
+            <div class="cert-badge">BA</div>
+            <h3 class="card-title-sm">Business Analysis Certification</h3>
+            <p class="card-meta">Coursera</p>
+            <a href="assets/documents/business-analysis-certificate.pdf" target="_blank" rel="noopener" class="btn-view">View Certificate</a>
+          </article>
+          <article class="cert-card reveal-up" data-delay="3">
+            <div class="cert-badge">Tally</div>
+            <h3 class="card-title-sm">Tally Accounting Certification</h3>
+            <p class="card-meta">College Provided</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="Tally Accounting Certificate" data-lightbox-src="assets/images/certifications/tally-accounting.jpg">View Certificate</button>
+          </article>
+          <article class="cert-card reveal-up">
+            <div class="cert-badge">BMC</div>
+            <h3 class="card-title-sm">Business Model Canvas</h3>
+            <p class="card-meta">Workshop, Sri Sapthagiri PU College</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="Business Model Canvas Certificate" data-lightbox-src="assets/images/certifications/business-model-canvas.jpg">View Certificate</button>
+          </article>
+          <article class="cert-card reveal-up" data-delay="1">
+            <div class="cert-badge">SIP</div>
+            <h3 class="card-title-sm">Summer Immersion Program</h3>
+            <p class="card-meta">Management, Entrepreneurship &amp; Finance — April 2025</p>
+            <button class="btn-view" data-lightbox data-lightbox-title="Summer Immersion Program Certificate" data-lightbox-src="assets/images/certifications/sip.jpg">View Certificate</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Experience</p>
+        <h2 class="section-title reveal-up">Hands-On Learning</h2>
+
+        <article class="experience-card reveal-up">
+          <div class="experience-head">
+            <div>
+              <h3 class="card-title">Business Development Executive Intern</h3>
+              <p class="card-role">ATZ IMEX Pvt. Ltd.</p>
+            </div>
+            <p class="mini-label">20 Apr – 24 Jun</p>
+          </div>
+          <p class="body-md">
+            Worked on outreach strategies to reach UK clients, combining market research with hands-on
+            execution — from building the company's website to running email outreach at scale and
+            learning the fundamentals of international trade. Took initiative well beyond the brief,
+            contributing independently to the company's growth.
+          </p>
+          <button class="btn-view" data-lightbox data-lightbox-title="Internship Certificate" data-lightbox-src="assets/images/certifications/internship.jpg">View Certificate</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== AWARDS & RECOGNITION ===================== -->
+    <section class="section" id="awards">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Awards &amp; Recognition</p>
+        <h2 class="section-title reveal-up">Moments Worth Noting</h2>
+
+        <div class="award-grid">
+          <div class="award-chip reveal-up"><span class="award-name">Voice of Sapthagiri Award</span><span class="award-year">Ankura 2026</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Voice of Sapthagiri Award" data-lightbox-src="assets/images/awards/voice-of-sapthagiri.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="1"><span class="award-name">Student Ambassador Award</span><span class="award-year">Ankura 2026</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Student Ambassador Award" data-lightbox-src="assets/images/awards/student-ambassador.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="2"><span class="award-name">ACAS Ace Award</span><span class="award-year">Advance Computer Application Skills</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="ACAS Ace Award" data-lightbox-src="assets/images/awards/acas-ace.jpg">View</button></div>
+          <div class="award-chip reveal-up"><span class="award-name">ACAS Pro E-novation Award</span><span class="award-year">Advance Computer Application Skills Pro</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="ACAS Pro E-novation Award" data-lightbox-src="assets/images/awards/acas-pro-enovation.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="1"><span class="award-name">Best Individual Presenter</span><span class="award-year">BOCS</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Best Individual Presenter Award" data-lightbox-src="assets/images/awards/best-individual-presenter.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="2"><span class="award-name">Best Performance Award</span><span class="award-year">SEPME</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Best Performance Award" data-lightbox-src="assets/images/awards/best-performance.jpg">View</button></div>
+          <div class="award-chip reveal-up"><span class="award-name">Exemplary Performance Award</span><span class="award-year">Kurukshetra</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Exemplary Performance Award" data-lightbox-src="assets/images/awards/exemplary-performance.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="1"><span class="award-name">TED-Ed Student Talks</span><span class="award-year">Speaker</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="TED-Ed Student Talks" data-lightbox-src="assets/images/awards/ted-ed.jpg">View</button></div>
+          <div class="award-chip reveal-up" data-delay="2"><span class="award-name">Anchor Extraordinaire</span><span class="award-year">Namdesi 2025</span><button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Anchor Extraordinaire Award" data-lightbox-src="assets/images/awards/anchor-extraordinaire.jpg">View</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SPEAKING & LEADERSHIP ===================== -->
+    <section class="section" id="speaking">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Speaking &amp; Leadership</p>
+        <h2 class="section-title reveal-up">Moments That Found My Voice</h2>
+        <div class="leadership-split">
+          <div class="events-block reveal-up" data-delay="1">
+            <p class="mini-label">Events Hosted🎤</p>
+            <div class="event-tag-row">
+              <span class="event-tag"><span class="event-name">Kurukshetra Adhyaya 6</span><span class="event-year">2025</span></span>
+              <span class="event-tag"><span class="event-name">Ankura</span><span class="event-year">2025</span></span>
+              <span class="event-tag"><span class="event-name">Namdesi</span><span class="event-year">2025</span></span>
+              <span class="event-tag"><span class="event-name">BOCS</span><span class="event-year">2024</span></span>
+              <span class="event-tag"><span class="event-name">SEPME</span><span class="event-year">2024</span></span>
+              <span class="event-tag"><span class="event-name">Acas Pro Skill Up Fest</span><span class="event-year">2025</span></span>
+              <span class="event-tag"><span class="event-name">Samarpana</span><span class="event-year">2024</span></span>
+            </div>
+          </div>
+          <div class="visionx-block reveal-up" data-delay="2">
+            <p class="mini-label">Vision X</p>
+            <div class="visionx-row">
+              <div class="visionx-item">
+                <h4 class="card-title-sm">Banking Project</h4>
+                <p class="card-meta">Member, Acting Group</p>
+              </div>
+              <div class="visionx-item">
+                <h4 class="card-title-sm">Marketing Project</h4>
+                <p class="card-meta">Script Writer, Theatre Team</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HALL OF VICTORIES ===================== -->
+    <section class="section" id="victories">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Milestones & Achievements</p>
+        <h2 class="section-title reveal-up">College Competitions Won</h2>
+
+        <div class="victory-grid">
+          <article class="victory-card victory-gold reveal-up">
+            <p class="victory-prize">1st Prize</p>
+            <h3 class="card-title-sm">Aakhyana</h3>
+            <p class="card-meta">Video Advertisement</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Aakhyana — 1st Prize" data-lightbox-src="assets/images/victories/aakhyana.jpg">View</button>
+          </article>
+          <article class="victory-card victory-silver reveal-up" data-delay="1">
+            <p class="victory-prize">2nd Prize</p>
+            <h3 class="card-title-sm">Yaksha Prashne</h3>
+            <p class="card-meta">First PU</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Yaksha Prashne — 2nd Prize" data-lightbox-src="assets/images/victories/yaksha-prashne-2nd.jpg">View</button>
+          </article>
+          <article class="victory-card victory-bronze reveal-up" data-delay="2">
+            <p class="victory-prize">3rd Prize</p>
+            <h3 class="card-title-sm">Yaksha Prashne</h3>
+            <p class="card-meta">Second PU</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Yaksha Prashne — 3rd Prize" data-lightbox-src="assets/images/victories/yaksha-prashne-3rd.jpg">View</button>
+          </article>
+          <article class="victory-card victory-silver reveal-up">
+            <p class="victory-prize">2nd Prize</p>
+            <h3 class="card-title-sm">Manthan</h3>
+            <p class="card-meta">College Competition</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Manthan — 2nd Prize" data-lightbox-src="assets/images/victories/manthan.jpg">View</button>
+          </article>
+          <article class="victory-card victory-silver reveal-up" data-delay="1">
+            <p class="victory-prize">2nd Prize</p>
+            <h3 class="card-title-sm">Mayajaala</h3>
+            <p class="card-meta">College Competition</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Mayajaala — 2nd Prize" data-lightbox-src="assets/images/victories/mayajaala.jpg">View</button>
+          </article>
+          <article class="victory-card victory-bronze reveal-up" data-delay="2">
+            <p class="victory-prize">3rd Prize</p>
+            <h3 class="card-title-sm">Vrittanta</h3>
+            <p class="card-meta">College Competition</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Vrittanta — 3rd Prize" data-lightbox-src="assets/images/victories/vrittanta.jpg">View</button>
+          </article>
+          <article class="victory-card victory-participant reveal-up">
+            <p class="victory-prize">Participant</p>
+            <h3 class="card-title-sm">Mad Ad Show</h3>
+            <p class="card-meta">College Competition</p>
+            <button class="btn-view btn-view-sm" data-lightbox data-lightbox-title="Mad Ad Show" data-lightbox-src="assets/images/victories/mad-ad-show.jpg">View</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BEYOND WORK ===================== -->
+    <section class="section" id="beyond">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Beyond Work</p>
+        <h2 class="section-title reveal-up">What Fuels My Curiosity</h2>
+
+        <div class="beyond-grid">
+          <div class="beyond-block reveal-up">
+            <p class="mini-label">Topics I Love Discussing</p>
+            <div class="tag-row">
+              <span class="tag">Entrepreneurship</span><span class="tag">Artificial Intelligence</span>
+              <span class="tag">Psychology</span><span class="tag">Business Problems</span>
+              <span class="tag">Marketing</span>
+              <span class="tag">Photography</span><span class="tag">Gadgets</span>
+              <span class="tag">Emerging Technologies</span>
+            </div>
+          </div>
+
+          <div class="beyond-block reveal-up" data-delay="1">
+            <p class="mini-label">Hobbies</p>
+            <div class="tag-row">
+              <span class="tag tag-outline">Reading Books</span><span class="tag tag-outline">Photography</span>
+              <span class="tag tag-outline">Dancing</span><span class="tag tag-outline">Sketching</span>
+              <span class="tag tag-outline">Mandala Coloring</span><span class="tag tag-outline">Lippan Art</span>
+              <span class="tag tag-outline">Clay Craft</span><span class="tag tag-outline">Stock Market</span>
+            </div>
+          </div>
+
+          <div class="fun-fact-card reveal-up" data-delay="2">
+            <span class="fun-fact-icon">🐶</span>
+            <p class="body-md">Proud <strong>Canophilist</strong> — a genuine dog lover.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FUTURE VISION ===================== -->
+    <section class="section vision-section" id="vision">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Future Vision</p>
+        <blockquote class="vision-quote reveal-up">
+          In the coming years, I see myself as a well-known speaker, a respected mentor, and a
+          recognized leader — someone creating meaningful impact on society. I want to keep
+          showcasing my capabilities through real work, continuously adding new certifications,
+          internships, projects, and achievements, while building a personal brand rooted in
+          authenticity.
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section" id="contact">
+      <div class="section-inner">
+        <p class="eyebrow reveal-up">Contact</p>
+        <h2 class="section-title reveal-up">Let's Talk</h2>
+        <p class="body-lg reveal-up" data-delay="1">
+          Open to conversations about opportunities, ideas, or collaborations. 
+          Reach out any time!
+        </p>
+
+        <div class="contact-row reveal-up" data-delay="2">
+          <a href="mailto:jeevithamr0331@gmail.com" class="contact-link">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">jeevithamr0331@gmail.com</span>
+          </a>
+          <a href=www.linkedin.com/in/jeevitha-m-r-871b63323 class="contact-link" data-social="linkedin">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">Jeevitha MR</span>
+          </a>
+          <a href="#" class="contact-link" data-social="instagram">
+            <span class="contact-label">Instagram</span>
+            <span class="contact-value">@jeeevitha</span>
+          </a>
+        </div>
+
+        <form class="contact-form reveal-up" id="contactForm" data-delay="3">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Email <span class="required">*</span></label>
+              <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="section-inner footer-inner">
+      <div class="footer-brand">
+        <p class="nav-logo">JM<span class="dot">R</span></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="mailto:jeevithamr0331@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+    <p class="footer-copyright">© 2026 Jeevitha MR. All rights reserved.</p>
+  </footer>
+
+  <!-- ===================== LIGHTBOX MODAL ===================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" data-lightbox-close aria-label="Close">&times;</button>
+      <div class="lightbox-placeholder" id="lightboxImage">
+        <p id="lightboxTitle">Certificate</p>
+        <span class="lightbox-hint">Image will appear here once uploaded</span>
+      </div>
+    </div>
+  </div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
